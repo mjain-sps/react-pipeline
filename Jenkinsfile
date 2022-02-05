@@ -1,13 +1,11 @@
 pipeline {
      agent any
      stages {
-        stage("install") {
+        stage("Build") {
             steps {
                 sh "sudo npm install"
-            }
-        }
-        stage("build"){
                 sh "sudo npm run build"
+            }
         }
         stage("Deploy") {
             steps {
